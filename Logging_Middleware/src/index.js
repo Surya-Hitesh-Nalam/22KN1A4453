@@ -19,17 +19,17 @@ export async function Log(stack,level,pkg,message) {
     validate('package', pkg);
     const payload = { stack, level, package: pkg, message };
 
-    const token = await fetch(process.env.LOGGING_URL,{
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${process.env.TOKEN}`
-    },
-body:JSON.stringify(payload)})
+    //const token = await fetch(process.env.LOGGING_URL,{
+       // method: 'POST',
+        //headers: {
+            //'Content-Type': 'application/json',
+            //'Authorization': `Bearer ${process.env.TOKEN}`
+    //},
+//body:JSON.stringify(payload)}
     
-if(!res.ok){
-    console.error('Log API error');
-}
+// if(!res.ok){
+//     console.error('Log API error');
+// }
 
 }
 
